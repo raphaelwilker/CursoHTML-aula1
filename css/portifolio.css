@@ -1,0 +1,18 @@
+.box-link-imagens-portifolio{
+    border: 8px solid #000;
+    padding: 2em;
+    background-color: #FAFFFC;
+    width: 300px;
+    height: 300px;
+    margin-left: 0px;
+    margin-right: 1em;
+    margin-bottom: 1.25em;
+}
+
+.box-link-imagens-portifolio img{
+    width: 100%;
+}
+
+.box-left{
+    float: left;
+}
