@@ -35,3 +35,29 @@ main div>p::first-letter{
     margin-right: .2ch;
     line-height: 1;
 }
+
+.habilidades thead th{
+    font-weight: bold;
+    color: #FFF;
+    background-color: #3C1D3D;
+}
+
+.habilidades tr td:first-child{
+    background-color: #851944;
+    color: #FFF;
+}
+
+.habilidades th,
+.habilidades td{
+    padding: 1em;
+}
+
+.habilidades td{
+    background-color: #EEE;
+}
+
+.habilidades {
+    border-collapse: separate;
+    border-spacing: .25em;
+    margin: 1em 0;
+}

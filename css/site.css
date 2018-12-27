@@ -38,9 +38,13 @@ h1{
 
 main{
     float: left;
-    width: 85%;
+    width: calc(100% - 0.9 * 300px);
     padding-bottom: 80px;
     cursor: default;
+}
+
+.navegacao-site {
+    width: calc(0.9 * 200px);
 }
 
 h2{
