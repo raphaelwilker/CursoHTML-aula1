@@ -30,7 +30,30 @@
     font-size: 4em;
     transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
+    -webkit-animation: flutua 1s infinite;
+    animation: flutua 1s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    position: relative;
 }
+
+.saudacao:hover em,
+.saudacao:focus em {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@keyframes flutua{
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
+}
+
 .botao-twitter{
     width: 14em;
     line-height: 1;
@@ -51,6 +74,14 @@
     right: 0;
     transform-origin: 0 0;
     transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
+
+    opacity: 1;
+    -webkit-animation: aparece 0.5s;
+    animation: aparece 0.5s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
 }
 .botao-index {
     font-size: 1.25em;
@@ -62,7 +93,17 @@
     margin: 2em auto;
     display: block;
     text-align: center;
+    text-decoration: none;
+    transition: .5s;
 }
+
+.botao-index:hover,
+.botao-index:focus{
+    background-color: #C54974;
+    color: white;
+    box-shadow: 0 0 1em #FA9;
+}
+
 .secao-inicio h2 {
     font-size: 3em;
     text-shadow: 2px 2px #000;
@@ -87,12 +128,11 @@
     color: #FFF;
 }
 .trabalhos ul {
-    overflow: hidden;
     border: .5em solid black;
+    display: flex;
 }
 .trabalhos li {
-    float: left;
-    width: 33.333%;
+    flex: 1;
 }
 .trabalhos img {
     width: 100%;
@@ -220,7 +260,17 @@ main {
     position: absolute;
     font-weight: bold;
     font-size: .3em;
+    -webkit-animation: aparece 2s;
+    animation: aparece 2s;
 }
+
+@keyframes aparece {
+    0% {
+        opacity: 0;
+        transform: scale(0.001);
+    }
+}
+
 .palavras-home {
     perspective: 6px;
     position: absolute;
